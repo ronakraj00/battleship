@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    text-align: center;
+    font-size: xx-large;
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:7px 0;
+}
+
+.cell{
+    background-color: aqua;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px;
+}
+
+#messages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+}
+
+#messages button{
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius:12px ;
+}
+
+.invisible{
+    display: none;
+}
+
+#gridSystem{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#gridSystem #playerGrid,#computerGrid{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    gap: 2px;
+}
+
+.attacked-cell{
+    background-color: rgb(38, 171, 60) !important;
+}
+
+.attacked-ship{
+    background-color: rgba(255, 0, 0, 0.947);
+}
