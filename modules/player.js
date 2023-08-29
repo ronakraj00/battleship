@@ -22,8 +22,8 @@ export class Computer extends Player {
                 (obj) => obj.x == x && obj.y == y
             );
         }
-        playerGameBoard.alreadyAttacked.push({ x, y });
         playerGameBoard.receiveAttack(x, y);
+        playerGameBoard.alreadyAttacked.push({ x, y });
         console.log("computer attacked at", x, y);
         return { x, y };
     }

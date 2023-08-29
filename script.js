@@ -87,13 +87,15 @@ function playComputer() {
 }
 
 function checkWinPlayer() {
+    
     if (compGameBoard.hasEveryShipSunk()) {
         playerHasWon();
         showEndScreen();
     }
 }
 function checkWinComp() {
-    console.log("checkWinComp")
+    console.log("checkWinComp");
+    console.log("computer gameboard ",compGameBoard.array,playerGameBoard);
     if (playerGameBoard.hasEveryShipSunk()) {
         console.log("everyship has sunk")
         computerHasWon();
